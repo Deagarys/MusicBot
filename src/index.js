@@ -41,7 +41,7 @@ new CommandKit({
 const player = new Player(client);
 await player.extractors.register(DeezerExtractor, { decryptionKey: process.env.DEEZER_KEY });
 
-await player.extractors.loadMulti([SpotifyExtractor, DeezerExtractor, YoutubeiExtractor, DefaultExtractors]);
+await player.extractors.loadMulti([SpotifyExtractor, DeezerExtractor, DefaultExtractors]);
 
 
 // Handle the event when a track starts playing
