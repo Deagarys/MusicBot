@@ -33,4 +33,5 @@ jobs:
 
       - name: Test
         run: |
+          cd /bot
           docker run --rm ${{ env.TEST_TAG }}
