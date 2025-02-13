@@ -27,6 +27,6 @@ jobs:
                 uses: docker/build-push-action@v6.13.0
                 with:
                   context: .
-                  file: ./Dockerfile
+                  file: ./bot/Dockerfile
                   push: true
                   tags: ${{ secrets.DOCKER_USERNAME }}/music:latest
