@@ -27,10 +27,10 @@ jobs:
       - name: Build and export to Docker
         uses: docker/build-push-action@v6
         with:
-          context: ./bot
           load: true
+          file: ./bot/Dockerfile
           tags: ${{ env.TEST_TAG }}
 
       - name: Test
         run: |
-          docker run --file ./bot/Dockerfile --rm ${{ env.TEST_TAG }}
+          docker run --rm ${{ env.TEST_TAG }}
