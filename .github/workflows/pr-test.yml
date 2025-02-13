@@ -29,10 +29,11 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: .
-          file: /bot/Dockerfile
+          file: ./bot/Dockerfile
           load: true
           tags: ${{ env.TEST_TAG }}
 
       - name: Test
         run: |
+          cd bot
           docker run --rm ${{ env.TEST_TAG }}
